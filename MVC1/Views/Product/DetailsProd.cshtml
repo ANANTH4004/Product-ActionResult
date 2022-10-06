@@ -1,0 +1,59 @@
+﻿@model MVC1.Models.ProdModel
+
+@{
+    ViewBag.Title = "DetailsProd";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>DetailsProd</h2>
+
+<div>
+    <h4>ProdModel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ProdID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProdID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProdName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProdName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MgfDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MgfDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ExpDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ExpDate)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @*@Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |*@
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,58 @@
+﻿@model IEnumerable<MVC1.Models.ProdModel>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "CreateProd")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ProdID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ProdName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Price)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MgfDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ExpDate)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProdID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProdName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Price)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MgfDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ExpDate)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "EditProd", new {  id=item.ProdID }) |
+            @Html.ActionLink("Details", "DetailsProd", new { id = item.ProdID }) |
+            @Html.ActionLink("Delete", "DeleteProd", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>
