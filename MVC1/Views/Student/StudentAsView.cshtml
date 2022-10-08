@@ -1,0 +1,19 @@
+﻿@*@{
+        ViewBag.Title = "StudentAsView";
+        Layout = "~/Views/Shared/_LibraryLayout.cshtml";
+    }
+
+    <h2>StudentAsView</h2>*@
+
+@{
+    ViewData["Title"] = "StudentAsView";
+}
+<h2>StudentAsView</h2>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            @Html.Raw(ViewData["message"])
+        </div>
+    </div>
+</div>
+

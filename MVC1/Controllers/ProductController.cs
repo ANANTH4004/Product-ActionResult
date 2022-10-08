@@ -48,5 +48,9 @@ namespace MVC1.Controllers
             Plist.Add(model);
             return RedirectToAction("Index");
         }
+        public ActionResult Temp()
+        {
+            return View();
+        }
     }
 }
